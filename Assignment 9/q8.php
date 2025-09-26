@@ -9,7 +9,6 @@ $pattern = "/\b[6-9][0-9]{9}\b/";
 preg_match_all($pattern, $content, $matches);
 $numbers = array_unique($matches[0]);
 if (!empty($numbers)) {
-    // Save numbers into numbers.txt
     file_put_contents($outputFile, implode(PHP_EOL, $numbers));
     echo "<h3>Extracted Mobile Numbers:</h3>";
     echo nl2br(implode(PHP_EOL, $numbers));
