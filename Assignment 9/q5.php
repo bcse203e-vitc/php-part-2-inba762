@@ -14,7 +14,6 @@ echo "<h2>Last 5 Log Entries</h2>";
 echo "<table border='1' cellpadding='8' cellspacing='0'>";
 echo "<tr><th>Username</th><th>Date & Time</th><th>Action</th></tr>";
 foreach ($lastLogs as $log) {
-    // Split the log line into parts
     $parts = explode(" – ", $log);
     echo "<tr>";
     echo "<td>{$parts[0]}</td>";
